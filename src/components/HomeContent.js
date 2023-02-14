@@ -20,6 +20,7 @@ const HomeContent = ({ time, titleName }) => {
             productPrice="25000 บาท"
             soldOut="ขายแล้ว 2"
             time={time}
+            productId={3}
           />
           <Card
             productPicture={time ? BassFender2 : gibsonLogo}
@@ -27,6 +28,7 @@ const HomeContent = ({ time, titleName }) => {
             productPrice="52200 บาท"
             soldOut="ขายแล้ว 0"
             time={time}
+            productId={2}
           />
           <Card
             productPicture={time ? GuitarFender1 : yamahaLogo}
@@ -34,6 +36,7 @@ const HomeContent = ({ time, titleName }) => {
             productPrice="28800 บาท"
             soldOut="ขายแล้ว 5"
             time={time}
+            productId={9}
           />
         </div>
       </div>

@@ -1,8 +1,14 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Card from "../components/Card";
 import Layout from "../layouts/Layout";
+import Cartpage from "../pages/Cartpage";
 import Homepage from "../pages/Homepage";
+import Itempage from "../pages/Itempage";
 import Shoppingpage from "../pages/Shoppingpage";
+import { ProductContextProvider } from "../contexts/ProductContext";
+import Paymentpage from "../pages/Paymentpage";
+import Adminpage from "../pages/Adminpage";
+import Statuspage from "../pages/Statuspage";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +22,26 @@ const router = createBrowserRouter([
       {
         path: "/shopping",
         element: <Shoppingpage />,
+      },
+      {
+        path: "/item/:productId",
+        element: <Itempage />,
+      },
+      {
+        path: "/cart",
+        element: <Cartpage />,
+      },
+      {
+        path: "/payment",
+        element: <Paymentpage />,
+      },
+      {
+        path: "/admin",
+        element: <Adminpage />,
+      },
+      {
+        path: "/status",
+        element: <Statuspage />,
       },
     ],
   },
