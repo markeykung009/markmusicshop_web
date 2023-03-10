@@ -9,6 +9,7 @@ import { ProductContextProvider } from "../contexts/ProductContext";
 import Paymentpage from "../pages/Paymentpage";
 import Adminpage from "../pages/Adminpage";
 import Statuspage from "../pages/Statuspage";
+import Searchpage from "../pages/Searchpage";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: "/status",
         element: <Statuspage />,
+      },
+      {
+        path: "/search",
+        element: <Searchpage />,
       },
     ],
   },

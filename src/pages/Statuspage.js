@@ -10,20 +10,21 @@ const Statuspage = () => {
 
   // console.log(userId);
 
-  // const fetchStatus = async () => {
-  //   try {
-  //     const res = await OrderApi.getStatus(userId);
-  //     // console.log(res);
-  //     setStatus(res.data.order);
-  //     console.log(res.data);
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
+  const fetchOrder = async () => {
+    try {
+      const res = await OrderApi.getOrder();
+      // console.log(res);
+      setAdmin(res.data.order);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
-  // useEffect(() => {
-  //   fetchStatus();
-  // }, []);
+  useEffect(() => {
+    fetchOrder();
+  }, []);
+
+  console.log(admin);
   return (
     <div className="m-10 flex flex-col justify-center items-center">
       <div>
@@ -33,11 +34,9 @@ const Statuspage = () => {
         <p>สถานะ reject = บิลมีปัญหารอแอดมินติดต่อไปทางอีเมลล์</p>
       </div>
       <div className="mt-10">
-        <p className="text-emerald-400">{status}</p>
-        <button className="bg-sky-900 w-20 h-10 mt-10 text-zinc-50 rounded-full">
-          Check
-        </button>
+        <p className="text-emerald-400">{admin[0]?.status}</p>
       </div>
+      <input type="file" />
     </div>
   );
 };

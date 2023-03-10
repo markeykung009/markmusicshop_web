@@ -66,7 +66,10 @@ const Navbar = () => {
               <div className="mr-3">admin</div>
             </Link>
           ) : null}
-          <div className="flex items-center bg-[#d9d9d9] rounded-lg">
+          <div
+            className="flex items-center bg-[#d9d9d9] rounded-lg cursor-pointer"
+            onClick={() => navigate("/search")}
+          >
             <p className="pr-12 pl-2 py-1 text-black/50 ">ค้นหา</p>
             <i className="fa-solid fa-magnifying-glass pl-12 pr-2 py-2 text-black/50 " />
           </div>
